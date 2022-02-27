@@ -42,13 +42,13 @@ public class SudokuMain
         System.out.println("4) Automatically use sample puzzle #2 "); 
         System.out.println("5) Automatically use sample puzzle #3 (Hard) "); 
         
-        int userInput = scanner.nextInt(); 
+        int userInput = scanner.nextInt(); // Stores the choice inputted by client. 
         int index = 0; 
-        if(userInput == 1)
+        if(userInput == 1) // User Choice 1
         {
             for(int i = 1; i < 10; i++)
             {
-                for(int j = 1; j < 10; j++)
+                for(int j = 1; j < 10; j++) // i and j indicate the row and column values respectively. 
                 {
                     System.out.println("Enter the value of the board at (" + i + ", " + j + ") using 0 to indicate an empty space:"); 
                     inputPuzzle[index] = scanner.nextInt(); 
@@ -64,7 +64,7 @@ public class SudokuMain
             }
         }
         
-        else if(userInput == 2)
+        else if(userInput == 2) // User Choice 2
         {
             File file = new File("SudokuPuzzleTextFileInput.txt");
             Scanner scannerInput = new Scanner(file);
@@ -84,17 +84,17 @@ public class SudokuMain
             }
         }
         
-        else if(userInput == 3)
+        else if(userInput == 3) //User Choice 3
         {
             inputPuzzle = examplePuzzle1; 
         }
         
-        else if(userInput == 4)
+        else if(userInput == 4) //User Choice 4
         {
             inputPuzzle = examplePuzzle2; 
         }
         
-        else if(userInput == 5)
+        else if(userInput == 5) // User Choice 5
         {
             inputPuzzle = examplePuzzle3; 
         }
@@ -108,7 +108,7 @@ public class SudokuMain
         
         
         
-        System.out.println(); 
+        System.out.println(); //Creates Space on Console. 
         System.out.println(); 
         System.out.println(); 
         System.out.println(); 
@@ -122,6 +122,6 @@ public class SudokuMain
         
         System.out.println("Solved to best of code's ability: "); 
         System.out.println(); 
-        sudoku.printBoard(); 
+        sudoku.printBoard(); //Prints Solved Board. 
     }
 }
