@@ -66,7 +66,7 @@ public class SudokuMain
         
         else if(userInput == 2) // User Choice 2
         {
-            File file = new File("SudokuPuzzleTextFileInput.txt");
+            File file = new File("SudokuPuzzleTextFileInput.txt"); // Uses the Sudoku Puzzle from the input file. 
             Scanner scannerInput = new Scanner(file);
             String puzzleLine = scannerInput.nextLine(); 
             if(puzzleLine.length() == 81)
